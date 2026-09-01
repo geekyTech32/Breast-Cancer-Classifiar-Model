@@ -4,7 +4,7 @@
 # In[4]:
 
 
-import gradio as gr
+import streamlit 
 from tensorflow.keras.utils import img_to_array , load_img
 from tensorflow.keras.models import load_model 
 import numpy as np
@@ -26,11 +26,3 @@ def classification_predict(img):
     result = model.predict(img_array)
     return result 
 
-demo = gr.Interface(
-    fn=classification_predict,
-    inputs=gr.Image(type="numpy"), 
-                    outputs="label", 
-                    title="Breast Cancer Classifier",  
-                    description="Upload an ultrasound image to classify as Normal, Benign, or Malignant.")
-
-demo.launch()
