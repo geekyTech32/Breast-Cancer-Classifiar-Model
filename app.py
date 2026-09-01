@@ -5,7 +5,7 @@
 
 
 import streamlit 
-from tensorflow.keras.utils import img_to_array , load_img
+from tensorflow.keras.preprocessing.image import img_to_array, load_img
 from tensorflow.keras.models import load_model 
 import numpy as np
 from tensorflow.keras.applications import efficientnet
