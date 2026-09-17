@@ -4,3 +4,4 @@ pillow
 efficientnet
 keras
 fastapi
+uvicorn[standard]
